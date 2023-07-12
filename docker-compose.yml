@@ -1,0 +1,10 @@
+services:
+  web_bot:
+    build:
+      context: .
+    env_file:
+      - .env
+    volumes:
+        - ./:/service
+    command: sh -c "
+      python main.py"

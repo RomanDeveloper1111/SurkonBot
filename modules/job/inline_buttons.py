@@ -1,0 +1,128 @@
+from aiogram import types
+
+
+BM = types.InlineKeyboardButton(text='↩️Главное меню', callback_data='menu')
+BA = types.InlineKeyboardButton(text='Добавить в бота', callback_data='addToBot')
+
+
+cities_board = types.InlineKeyboardMarkup(row_width=3)
+c1 = types.InlineKeyboardButton(text='Никосия', callback_data='city_job_nikosiya')
+c2 = types.InlineKeyboardButton(text='Гирне', callback_data='city_job_girne')
+c3 = types.InlineKeyboardButton(text='Фамагуста', callback_data='city_job_phamagusta')
+c4 = types.InlineKeyboardButton(text='Гюзельюрт', callback_data='city_job_guzel')
+c5 = types.InlineKeyboardButton(text='Искеле', callback_data='city_job_iscle')
+cities_board.add(c1, c2, c3, c4, c5, BM)
+
+
+vacancy_and_CV = types.InlineKeyboardMarkup(row_width=1)
+v1 = types.InlineKeyboardButton(text='Вакансии', callback_data='vacancy')
+v2 = types.InlineKeyboardButton(text='Резюме', callback_data='CV')
+vacancy_and_CV.add(v1, v2, BM)
+
+professions_girne_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Домработницы', callback_data='professions_housekeeper_girne')
+p2 = types.InlineKeyboardButton(text='Медицина', callback_data='professions_medicine_girne')
+p3 = types.InlineKeyboardButton(text='Официанты', callback_data='professions_waiters_girne')
+p4 = types.InlineKeyboardButton(text='Риэлтор', callback_data='professions_realtor_girne')
+p5 = types.InlineKeyboardButton(text='Секретарь', callback_data='professions_secretary_girne')
+p6 = types.InlineKeyboardButton(text='Такси', callback_data='professions_taxi_girne')
+p7 = types.InlineKeyboardButton(text='SMM/Маркетолог', callback_data='professions_smm_girne')
+professions_girne_board.add(p1, p2, p3, p4, p5, p6, p7, BM, BA)
+
+professions_guzel_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Такси', callback_data='professions_taxi_guzel')
+p2 = types.InlineKeyboardButton(text='SMM/Маркетолог', callback_data='professions_smm_guzel')
+
+professions_guzel_board.add(p1, p2, BM, BA)
+
+professions_nikosiya_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Медицина', callback_data='professions_medicine_nikosiya')
+p2 = types.InlineKeyboardButton(text='Такси', callback_data='professions_taxi_nikosiya')
+p3 = types.InlineKeyboardButton(text='SMM/Маркетолог', callback_data='professions_smm_nikosiya')
+professions_nikosiya_board.add(p1, p2, p3, BM, BA)
+
+professions_iscle_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Массажисты', callback_data='professions_masseur_iscle')
+p2 = types.InlineKeyboardButton(text='Менеджеры', callback_data='professions_managers_iscle')
+p3 = types.InlineKeyboardButton(text='Переводчики', callback_data='professions_translators_iscle')
+p4 = types.InlineKeyboardButton(text='Риэлтор', callback_data='professions_realtor_iscle')
+p5 = types.InlineKeyboardButton(text='Строительство', callback_data='professions_building_iscle')
+p6 = types.InlineKeyboardButton(text='Такси', callback_data='professions_taxi_iscle')
+p7 = types.InlineKeyboardButton(text='SMM/Маркетолог', callback_data='professions_smm_iscle')
+professions_iscle_board.add(p1, p2, p3, p4, p5, p6, p7, BM, BA)
+
+professions_phamagusta_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Медицина', callback_data='professions_medicine_phamagusta')
+p2 = types.InlineKeyboardButton(text='Менеджеры', callback_data='professions_managers_phamagusta')
+p3 = types.InlineKeyboardButton(text='Переводчики', callback_data='professions_translators_phamagusta')
+p4 = types.InlineKeyboardButton(text='Риэлтор', callback_data='professions_realtor_phamagusta')
+p5 = types.InlineKeyboardButton(text='Строительство', callback_data='professions_building_phamagusta')
+p6 = types.InlineKeyboardButton(text='Такси', callback_data='professions_taxi_phamagusta')
+p7 = types.InlineKeyboardButton(text='SMM/Маркетолог', callback_data='professions_smm_phamagusta')
+professions_phamagusta_board.add(p1, p2, p3, p4, p5, p6, p7, BM, BA)
+
+
+profile_girne_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Агроном', callback_data='profile_agronomist_girne')
+p2 = types.InlineKeyboardButton(text='Диджей', callback_data='profile_DJ_girne')
+p3 = types.InlineKeyboardButton(text='Дизайн', callback_data='profile_design_girne')
+p4 = types.InlineKeyboardButton(text='Медицина', callback_data='profile_medicine_girne')
+p5 = types.InlineKeyboardButton(text='Няни', callback_data='profile_nanny_gerne')
+p6 = types.InlineKeyboardButton(text='Продажи', callback_data='profile_sales_gerne')
+p7 = types.InlineKeyboardButton(text='Разнорабочие', callback_data='profile_genworker_gerne')
+p8 = types.InlineKeyboardButton(text='Ресторанные бизнес', callback_data='profile_restaurant_gerne')
+p9 = types.InlineKeyboardButton(text='Строительство', callback_data='profile_building_gerne')
+p10 = types.InlineKeyboardButton(text='WEB', callback_data='profile_web_gerne')
+profile_girne_board.add(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, BM, BA)
+
+
+profile_guzel_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Агроном', callback_data='profile_agronomist_guzel')
+p2 = types.InlineKeyboardButton(text='Диджей', callback_data='profile_DJ_guzel')
+p3 = types.InlineKeyboardButton(text='Дизайн', callback_data='profile_design_guzel')
+p4 = types.InlineKeyboardButton(text='Медицина', callback_data='profile_medicine_guzel')
+p5 = types.InlineKeyboardButton(text='Продажи', callback_data='profile_sales_guzel')
+p6 = types.InlineKeyboardButton(text='Ресторанные бизнес', callback_data='profile_restaurant_guzel')
+p7 = types.InlineKeyboardButton(text='Строительство', callback_data='profile_building_guzel')
+p8 = types.InlineKeyboardButton(text='WEB', callback_data='profile_web_guzel')
+profile_guzel_board.add(p1, p2, p3, p4, p5, p6, p7, p8, BM, BA)
+
+
+profile_nikosiya_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Агроном', callback_data='profile_agronomist_nikosiya')
+p2 = types.InlineKeyboardButton(text='Диджей', callback_data='profile_DJ_nikosiya')
+p3 = types.InlineKeyboardButton(text='Дизайн', callback_data='profile_design_nikosiya')
+p4 = types.InlineKeyboardButton(text='Медицина', callback_data='profile_medicine_nikosiya')
+p5 = types.InlineKeyboardButton(text='Продажи', callback_data='profile_sales_guzel')
+p6 = types.InlineKeyboardButton(text='Ресторанные бизнес', callback_data='profile_restaurant_nikosiya')
+p7 = types.InlineKeyboardButton(text='Строительство', callback_data='profile_building_nikosiya')
+p8 = types.InlineKeyboardButton(text='WEB', callback_data='profile_web_nikosiya')
+profile_nikosiya_board.add(p1, p2, p3, p4, p5, p6, p7, p8, BM, BA)
+
+
+profile_iscle_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Агроном', callback_data='profile_agronomist_iscle')
+p2 = types.InlineKeyboardButton(text='Диджей', callback_data='profile_DJ_iscle')
+p3 = types.InlineKeyboardButton(text='Дизайн', callback_data='profile_design_iscle')
+p4 = types.InlineKeyboardButton(text='Медицина', callback_data='profile_medicine_iscle')
+p5 = types.InlineKeyboardButton(text='Няни', callback_data='profile_nanny_iscle')
+p6 = types.InlineKeyboardButton(text='Продажи', callback_data='profile_sales_iscle')
+p7 = types.InlineKeyboardButton(text='Разнорабочие', callback_data='profile_genworker_iscle')
+p8 = types.InlineKeyboardButton(text='Ресторанные бизнес', callback_data='profile_restaurant_iscle')
+p9 = types.InlineKeyboardButton(text='Строительство', callback_data='profile_building_iscle')
+p10 = types.InlineKeyboardButton(text='WEB', callback_data='profile_web_iscle')
+profile_iscle_board.add(p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, BM, BA)
+
+
+profile_phamagusta_board = types.InlineKeyboardMarkup(row_width=3)
+p1 = types.InlineKeyboardButton(text='Агроном', callback_data='profile_agronomist_phamagusta')
+p2 = types.InlineKeyboardButton(text='Диджей', callback_data='profile_DJ_phamagusta')
+p3 = types.InlineKeyboardButton(text='Дизайн', callback_data='profile_design_phamagusta')
+p4 = types.InlineKeyboardButton(text='Медицина', callback_data='profile_medicine_phamagusta')
+p5 = types.InlineKeyboardButton(text='Няни', callback_data='profile_nanny_phamagusta')
+p6 = types.InlineKeyboardButton(text='Продажи', callback_data='profile_sales_phamagusta')
+p7 = types.InlineKeyboardButton(text='Ресторанные бизнес', callback_data='profile_restaurant_phamagusta')
+p8 = types.InlineKeyboardButton(text='Строительство', callback_data='profile_building_phamagusta')
+p9 = types.InlineKeyboardButton(text='WEB', callback_data='profile_web_phamagusta')
+profile_phamagusta_board.add(p1, p2, p3, p4, p5, p6, p7, p8, p9, BM, BA)
+
